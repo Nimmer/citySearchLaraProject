@@ -1,0 +1,41 @@
+<?php $__env->startSection("content"); ?>
+
+
+
+
+        <h1 class="cover-heading">Search for a city</h1>
+
+               <!--
+        <div class="ui-widget">
+          <label for="citySearchInput"> </label>
+
+          <input id="citySearchInput" placeholder="Enter city name here..."  >
+
+          <a href="#" class="btn btn-lg1 btn-default">Search</a>
+        </div>
+        -->
+        <p>Hint:You can find all cities of Slovakia by entering their name in the search box above</p>
+        <div id="appendPoint">
+
+          <?php
+          echo "<p>asdadsads</p>";
+          ?>
+          <?php
+          ?>
+        <>
+
+
+
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection("search"); ?>
+  <?php echo Form::open(['action' => ['SearchController@autocomplete'], 'method' => 'GET']); ?>
+
+  <?php echo Form::text('citySearchInput', '', ['id' =>  'citySearchInput', 'placeholder' =>  'Enter city name here...']); ?>
+
+
+  <?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make("layouts.master", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
