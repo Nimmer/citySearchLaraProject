@@ -29,6 +29,8 @@
 @section("search")
     {!! Form::open(['action' => ['SearchController@autocomplete'], 'method' => 'GET']) !!}
     {!! Form::text('citySearchInput', '', ['id' =>  'citySearchInput', 'placeholder' =>  'Enter city name here...'])!!}
+    {!! Form::submit('Ahojasdas')!!}
+
     <a href="/showInfo"> {!! Form::button('Search', array('class' => 'button expand')) !!} </a>
     {!! Form::close() !!}
 @stop

@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kraj extends Model
 {
-    //
-    protected $table = "Kraj";
+    //nieco o vazbach n ku n, 1 ku n
+    protected $table = "Kraj";  //malym a mnozne
     protected $fillable = ["Nazov"];
 }
 ?>

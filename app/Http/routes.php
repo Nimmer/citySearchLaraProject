@@ -19,4 +19,5 @@ Route::get('/test', 'HomeController@index');
 Route::get('/update', 'HomeController@refreshCitiesDB');
 
 Route::get('search/autocomplete', 'SearchController@autocomplete');
-Route::get('/showInfo', 'CityInfoController@index');
+
+Route::get('/showInfo', 'SearchController@showCityInfo');

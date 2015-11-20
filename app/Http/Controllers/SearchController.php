@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\DB;
 class SearchController extends Controller
 {
     public function autocomplete(){
+
         $term = Input::get('term');
 
         $results = array();
 
-        $queries = DB::table('Kraj')
-            ->where('Nazov', 'LIKE', '%'.$term.'%')
-          //  ->orWhere('last_name', 'LIKE', '%'.$term.'%')
+        $queries = DB::table('Obec')
+            ->where('Nazov', 'like', '%'.''.$term.''.'%')
             ->take(5)->get();
 
         foreach ($queries as $query)
@@ -28,4 +28,21 @@ class SearchController extends Controller
         }
         return Response::json($results);
     }
+
+    public function showCityInfo(){
+
+            $term = Input::get('citySearchInput');
+
+            $results = array();
+
+            $queries = DB::table('Obec')
+                ->where('Nazov',$term)
+                ->take(5)->get();
+
+            foreach ($queries as $query)
+            {
+                $results[] = [ 'ID' => $query->ID, 'value' => $query->Nazov];
+            }
+            return Response::json($results);
+        }
 }

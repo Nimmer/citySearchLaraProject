@@ -8,4 +8,5 @@ class Okres extends Model
 {
     //
     protected $table="Okres";
+
 }

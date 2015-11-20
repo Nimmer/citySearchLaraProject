@@ -13,6 +13,8 @@ class Obce extends Migration
     public function up()
     {
         //
+        
+
     }
 
     /**

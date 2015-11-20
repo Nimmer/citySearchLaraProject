@@ -11,7 +11,7 @@ $('#citySearchInput').keypress(function (e) {
 $(function()
 {
     $( "#citySearchInput" ).autocomplete({
-        source: "search/autocomplete",
+       source: "search/autocomplete",
         minLength: 1,
         select: function(event, ui) {
             $('#citySearchInput').val(ui.item.value);
@@ -19,3 +19,5 @@ $(function()
     });
 });
 
+//novy input hidden id do ktoreho dam priamo uz idcko vybraneho
+//parser idealne command

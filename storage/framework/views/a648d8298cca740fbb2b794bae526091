@@ -30,6 +30,9 @@
 
     <?php echo Form::text('citySearchInput', '', ['id' =>  'citySearchInput', 'placeholder' =>  'Enter city name here...']); ?>
 
+    <?php echo Form::submit('Ahoj']); ?>
+
+
     <a href="/showInfo"> <?php echo Form::button('Search', array('class' => 'button expand')); ?> </a>
     <?php echo Form::close(); ?>
 
